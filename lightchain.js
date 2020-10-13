@@ -12,6 +12,8 @@ document.querySelector("#startknap").addEventListener("click", startWhackamole);
 
 function startWhackamole() {
   document.querySelector("#start").classList.add("hide");
+  document.querySelector(".taleboble").classList.add("hide");
+
   console.log("start");
 
   // call a random lightbulb
@@ -38,7 +40,7 @@ function randomLightBulbs() {
     console.log("add color");
     randomBulb.querySelector(".bulb-bg").setAttribute("fill", randomcolor);
     randomBulb.querySelector(".bulb-bg").setAttribute("opacity", "1");
-    sound.play();
+    // sound.play();
 
     // check which color so that the right color can be set for highlights
     if (randomcolor === "#FFA180") {

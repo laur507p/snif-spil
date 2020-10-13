@@ -1,10 +1,5 @@
 "use strict";
 
-// tjekker om light medaljen er true eller falses
-const lightmedal = localStorage.getItem("lightMedal");
-
-console.log(lightmedal);
-
 window.addEventListener("load", start);
 
 function start() {

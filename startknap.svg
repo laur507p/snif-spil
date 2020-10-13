@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	viewBox="0 0 1920 1080" enable-background="new 0 0 1920 1080" xml:space="preserve">
+	<g id="start">
+		<rect width="1920" height="1080" fill="black" opacity="0.3" />
+		<g id="startknap" class="pulse">
+			<path fill="#8888BA" d="M1146.6,478.4h-373c-54.7,0-99-44.3-99-99v0c0-54.7,44.3-99,99-99h373c54.7,0,99,44.3,99,99v0
+          C1245.6,434.1,1201.3,478.4,1146.6,478.4z" />
+			<text transform="matrix(1 0 0 1 817.6682 408.6566)" fill="#FFFFFF" font-family="'Chaloops-Bold'"
+				font-size="100.4211px">
+				START
+			</text>
+		</g>
+	</g>
+
+</svg>
