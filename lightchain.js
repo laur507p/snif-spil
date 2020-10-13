@@ -1,11 +1,17 @@
 "use strict";
 
+// siger at lightmedaljen er false til at starte med
+localStorage.setItem("lightMedal", "false");
+
 // when start button is pressed
 let lightChainPoints = 0;
 let whackTimeout;
-startWhackamole();
+let energy = 0;
+
+document.querySelector("#startknap").addEventListener("click", startWhackamole);
 
 function startWhackamole() {
+  document.querySelector("#start").classList.add("hide");
   console.log("start");
 
   // call a random lightbulb
@@ -25,8 +31,6 @@ function randomLightBulbs() {
   const randomBulb = bulbs[Math.floor(Math.random() * bulbs.length)];
   const sound = document.querySelector(".ding-sound");
 
-  console.log(randomBulb);
-
   // Bulbs start lighting up (randomly) and give them a random color
   if (randomBulb.classList.contains("coloredbulb")) {
     console.log("bulb already has color");
@@ -36,6 +40,7 @@ function randomLightBulbs() {
     randomBulb.querySelector(".bulb-bg").setAttribute("opacity", "1");
     sound.play();
 
+    // check which color so that the right color can be set for highlights
     if (randomcolor === "#FFA180") {
       randomBulb.querySelectorAll(".highlight").forEach((highlight) => {
         highlight.setAttribute("fill", "#FFBFA9");
@@ -65,7 +70,7 @@ function randomLightBulbs() {
     randomBulb.classList.add("coloredbulb");
   }
 
-  whackTimeout = setTimeout(randomLightBulbs, 2000);
+  whackTimeout = setTimeout(randomLightBulbs, 800);
 }
 
 function clickBulb() {
@@ -88,16 +93,28 @@ function clickBulb() {
 
     // points up
     lightChainPoints++;
+    energy += 25;
+    console.log(energy);
+    document.querySelector(".fill").setAttribute("width", energy);
   }
 
   // When the progress bar is full, you win
-  if (lightChainPoints === 10) {
+  if (lightChainPoints === 20) {
+    // remove click event listeners from bulb
+    const bulbs = document.querySelectorAll(".bulb");
+    bulbs.forEach((bulb) => {
+      bulb.removeEventListener("click", clickBulb);
+    });
+
+    // calls end function
     whackAMoleEnd();
   }
 }
 
 function whackAMoleEnd() {
   console.log("game over");
+  localStorage.setItem("lightMedal", "true");
+
   clearTimeout(whackTimeout);
 
   // You receive the light medal
