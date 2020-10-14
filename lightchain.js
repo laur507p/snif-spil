@@ -1,16 +1,27 @@
 "use strict";
 
 // siger at lightmedaljen er false til at starte med
-localStorage.setItem("lightMedal", "false");
+const lightMedal = localStorage.getItem("lightMedal");
+
+if (lightMedal === "true") {
+  document.querySelector(".heat-placeholder").classList.add("hide");
+  document.querySelector(".heat-icon").classList.remove("hide");
+}
 
 // when start button is pressed
 let lightChainPoints = 0;
 let whackTimeout;
 let energy = 0;
 
-document.querySelector("#startknap").addEventListener("click", startWhackamole);
+window.addEventListener("load", start);
+
+function start() {
+  document.querySelector(".intro-lightchain").play();
+  document.querySelector("#startknap").addEventListener("click", startWhackamole);
+}
 
 function startWhackamole() {
+  document.querySelector(".intro-lightchain").pause();
   document.querySelector("#start").classList.add("hide");
   document.querySelector(".taleboble").classList.add("hide");
 
@@ -31,7 +42,7 @@ function randomLightBulbs() {
   const randomcolor = colors[Math.floor(Math.random() * colors.length)];
   const bulbs = document.querySelectorAll(".bulb");
   const randomBulb = bulbs[Math.floor(Math.random() * bulbs.length)];
-  const sound = document.querySelector(".ding-sound");
+  const sound = document.querySelector(".ping-sound");
 
   // Bulbs start lighting up (randomly) and give them a random color
   if (randomBulb.classList.contains("coloredbulb")) {
@@ -40,7 +51,7 @@ function randomLightBulbs() {
     console.log("add color");
     randomBulb.querySelector(".bulb-bg").setAttribute("fill", randomcolor);
     randomBulb.querySelector(".bulb-bg").setAttribute("opacity", "1");
-    // sound.play();
+    sound.play();
 
     // check which color so that the right color can be set for highlights
     if (randomcolor === "#FFA180") {
@@ -115,7 +126,13 @@ function clickBulb() {
 
 function whackAMoleEnd() {
   console.log("game over");
-  localStorage.setItem("lightMedal", "true");
+  if (lightMedal === "false") {
+    document.querySelector(".heat-placeholder").classList.add("icon-hide");
+    document.querySelector(".heat-icon").classList.remove("hide");
+    document.querySelector(".heat-icon").classList.add("icon-show");
+    // set localstorage
+    localStorage.setItem("lightMedal", "true");
+  }
 
   clearTimeout(whackTimeout);
 

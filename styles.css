@@ -55,3 +55,39 @@ body {
     transform: scale(1);
   }
 }
+
+.icon-hide {
+  animation-name: icon-hide;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes icon-hide {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.icon-show {
+  animation-name: icon-show;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
+@keyframes icon-show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
