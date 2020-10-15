@@ -1,6 +1,6 @@
 "use strict";
 
-// siger at lightmedaljen er false til at starte med
+// tjek hvilke medals er vundet
 const lightMedal = localStorage.getItem("lightMedal");
 const heatMedal = localStorage.getItem("heatMedal");
 const waterMedal = localStorage.getItem("waterMedal");
