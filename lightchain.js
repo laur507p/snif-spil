@@ -34,7 +34,7 @@ window.addEventListener("load", start);
 
 function start() {
   document.querySelector(".intro-lightchain").play();
-  document.querySelector(".bg-music").volume = 0.2;
+  document.querySelector(".bg-music").volume = 0.1;
   document.querySelector(".bg-music").play();
  
 
@@ -106,7 +106,7 @@ function randomLightBulbs() {
     randomBulb.classList.add("coloredbulb");
   }
 
-  whackTimeout = setTimeout(randomLightBulbs, 900);
+  whackTimeout = setTimeout(randomLightBulbs, 1200);
 }
 
 function clickBulb() {

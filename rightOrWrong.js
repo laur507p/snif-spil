@@ -14,12 +14,12 @@ const cards = [
     bad: "assets/kitchen_cards_02.svg",
   },
   {
-    good: "assets/kitchen_cards_03.svg",
-    bad: "assets/kitchen_cards_04.svg",
+    good: "assets/kitchen_cards_04.svg",
+    bad: "assets/kitchen_cards_03.svg",
   },
   {
-    good: "assets/kitchen_cards_05.svg",
-    bad: "assets/kitchen_cards_06.svg",
+    good: "assets/kitchen_cards_06.svg",
+    bad: "assets/kitchen_cards_05.svg",
   },
   {
     good: "assets/kitchen_cards_09.svg",
@@ -34,11 +34,28 @@ const cards = [
 let randomNumberX = Math.floor(Math.random() * xPositions.length);
 
 // siger at lightmedaljen er false til at starte med
-const heatMedal = localStorage.getItem("heatMedal");
 
+const lightMedal = localStorage.getItem("lightMedal");
+const heatMedal = localStorage.getItem("heatMedal");
+const waterMedal = localStorage.getItem("waterMedal");
+const elMedal = localStorage.getItem("elMedal");
+
+
+if (lightMedal === "true") {
+  document.querySelector(".light-placeholder").classList.add("hide");
+  document.querySelector(".light-icon").classList.remove("hide");
+}
 if (heatMedal === "true") {
   document.querySelector(".heat-placeholder").classList.add("hide");
   document.querySelector(".heat-icon").classList.remove("hide");
+}
+if (waterMedal === "true") {
+  document.querySelector(".water-placeholder").classList.add("hide");
+  document.querySelector(".water-icon").classList.remove("hide");
+}
+if (elMedal === "true") {
+  document.querySelector(".el-placeholder").classList.add("hide");
+  document.querySelector(".el-icon").classList.remove("hide");
 }
 
 window.addEventListener("load", start);
