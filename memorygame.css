@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #8888ba;
+}
+
+h3,
+span {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.front-side {
+  backface-visibility: hidden;
+  animation: fadeIn 0.5s ease;
+}
+.board {
+  position: absolute;
+}
+.back-side {
+  backface-visibility: hidden;
+
+  transform: rotateY(180deg);
+  animation: fadeIn 0.5s ease;
+}
+.tile {
+  cursor: pointer;
+}
+
+.tile rect:hover {
+  stroke: #71e2d0;
+  stroke-width: 5px;
+}
+
+.flip {
+  transform: rotateY(180deg);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hide {
+  display: none;
+}
