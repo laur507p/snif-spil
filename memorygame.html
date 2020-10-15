@@ -4,15 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Snif</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="memorygame.css" />
   </head>
   <body>
     <!-- this is the test branch!! -->
     <!-- andrea -->
     <h3>Score:<span id="result">0</span></h3>
+
     <div id="board"></div>
     <div id="images" class="hide"></div>
+    <div class="sounds">
+      <audio class="match-sound" src="audio_assets/memory_game_right_match.mp3"></audio>
+      <audio class="intro-memorygame" src="audio_assets/memory_game_introduction.mp3"></audio>
+      <audio class="memorygame-complete" src="audio_assets/memory_game_complete.mp3"></audio>
+    </div>
 
-    <script src="script.js"></script>
+    <script src="memorygame.js"></script>
   </body>
 </html>

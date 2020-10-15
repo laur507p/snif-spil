@@ -8,6 +8,9 @@
   backface-visibility: hidden;
   animation: fadeIn 0.5s ease;
 }
+.board {
+  position: absolute;
+}
 .back-side {
   backface-visibility: hidden;
 
@@ -16,6 +19,10 @@
 }
 .tile {
   cursor: pointer;
+}
+
+.tile rect {
+  border-radius: 25px;
 }
 
 .flip {

@@ -39,7 +39,8 @@ async function loadSVG() {
 
 function start() {
   console.log("start");
-
+  document.querySelector(".intro-memorygame").play();
+  document.querySelector(".intro-memorygame").addEventListener("ended", hideBubble);
   document.querySelectorAll(".tile").forEach((tile) => tile.addEventListener("click", flipCard));
   randomizeCards();
   displayCards();
@@ -92,14 +93,14 @@ function checkForMatch() {
   console.log("checkForMatch");
   //Checking if cards match
   if (firstChosenCard.dataset.id === secondChosenCard.dataset.id) {
-    alert("Du har fundet et match");
+    //Play match sound
+    document.querySelector(".match-sound").play();
     //If cards match, push to cards matched cards array, to keep count of how many matches have been made
     cardsMatched.push(cardsChosen);
     console.log("cards matched", cardsMatched);
     //Disableing cards if they match
     disableCards();
   } else {
-    //If they don't match, unflip the cards
     setTimeout(unflipCards, 500);
   }
   //Emptying the cards chosen array after checking for match
@@ -122,6 +123,7 @@ function disableCards() {
 
 function unflipCards() {
   console.log("unflipCards");
+
   firstChosenCard.classList.remove("flip");
   secondChosenCard.classList.remove("flip");
   firstChosenCard.addEventListener("click", flipCard);
@@ -141,6 +143,7 @@ function updateScore() {
   resultDisplay.textContent = cardsMatched.length;
   if (cardsMatched.length === 5) {
     resultDisplay.textContent = "Tillykke, du har vundet spillet!";
+    setTimeOut(gameComplete, 500);
   }
 }
 
@@ -152,4 +155,13 @@ function lockBoard() {
 function unlockBoard() {
   console.log("unlockBoard");
   document.querySelectorAll(".tile").forEach((tile) => tile.addEventListener("click", flipCard));
+}
+
+function gameComplete() {
+  console.log("gameComplete");
+  document.querySelector(".memorygame-complete").play();
+}
+
+function hideBubble() {
+  document.querySelector(".taleboble").classList.add("hide");
 }
