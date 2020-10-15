@@ -61,6 +61,11 @@ if (elMedal === "true") {
 window.addEventListener("load", start);
 
 async function start() {
+  document.querySelector(".bg-music").play();
+  document.querySelector(".bg-music").volume = 0.1;
+
+
+
   createCards();
   document.querySelector(".right_or_wrong_introduction").play();
   document.querySelectorAll(".card").forEach((item) => {
@@ -73,6 +78,8 @@ function removeBubble() {
 }
 
 function checkRightorWrong(clickedCard) {
+  
+
   document.querySelector(".right_or_wrong_introduction").pause();
   console.log("test");
   counter++;
@@ -147,6 +154,7 @@ function randomizedXPosition() {
 }
 
 function checkPoints() {
+
   console.log(counter);
   if (counter === 5) {
     if (points > 4) {

@@ -21,6 +21,9 @@ function startClick() {
   startScreen.classList.add("hide");
   introScreen.classList.remove("hide");
 
+  document.querySelector(".bg-music").play();
+  document.querySelector(".bg-music").volume = 0.2;
+
   // play intro sound
   document.querySelector(".introsound").play();
 }

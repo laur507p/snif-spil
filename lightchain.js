@@ -34,17 +34,16 @@ window.addEventListener("load", start);
 
 function start() {
   document.querySelector(".intro-lightchain").play();
-  document.querySelector(".bg-music").volume = 0.1;
   document.querySelector(".bg-music").play();
- 
 
-  document.querySelector("#startknap").addEventListener("click", startWhackamole);
+  document.querySelector(".bg-music").volume = 0.1;
+
+  document.querySelector(".intro-lightchain").addEventListener("ended", startWhackamole);
 }
 
 function startWhackamole() {
-  document.querySelector(".intro-lightchain").pause();
-  document.querySelector(".bg-music").volume = 0.4;
-  document.querySelector("#start").classList.add("hide");
+  console.log("start")
+ 
   document.querySelector(".taleboble").classList.add("hide");
 
   console.log("start");
@@ -74,6 +73,7 @@ function randomLightBulbs() {
     randomBulb.querySelector(".bulb-bg").setAttribute("fill", randomcolor);
     randomBulb.querySelector(".bulb-bg").setAttribute("opacity", "1");
     sound.currentTime = 0
+    sound.volume = 0.5;
     sound.play();
 
     // check which color so that the right color can be set for highlights
@@ -150,7 +150,7 @@ function clickBulb() {
 function whackAMoleEnd() {
   console.log("game over");
   if (lightMedal === "false") {
-    document.querySelector(".bg-music").volume = 0.1;
+  
     document.querySelector(".level-complete").play();
 
     document.querySelector(".light-placeholder").classList.add("icon-hide");

@@ -66,19 +66,23 @@ function start() {
 }
 
 function hideBubble() {
-  document.querySelector(".bg-music").volume = 0.4;
+  
 
   document.querySelector(".taleboble").classList.add("hide");
 }
 
 function clickObject() {
-  document.querySelector(".bg-music").volume = 0.4;
-
-  introAudio.pause();
+ 
+  if (this.classList.contains("hasbeenclicked")) {
+  console.log("alredyfound")
+  } else {
+    introAudio.pause();
   document.querySelector(".taleboble").classList.add("hide");
   
   rightAudio.currentTime = 0;
   rightAudio.play();
+
+  this.classList.add("hasbeenclicked")
 
   points++;
 
@@ -94,6 +98,9 @@ function clickObject() {
   } else if (this === lamp) {
     lampOutline.classList.remove("hide");
   }
+    
+}
+  
 
   if (points === 5) {
     rightAudio.addEventListener("ended", levelComplete);
@@ -105,11 +112,8 @@ function levelComplete() {
 
   console.log("level complete")
 
-  if (lightMedal === "false") {
+  if (elMedal === "false") {
     lvlComplAudio.play()
-
-    document.querySelector(".bg-music").volume = 0.1;
-
 
     document.querySelector(".el-placeholder").classList.add("icon-hide");
     document.querySelector(".el-icon").classList.remove("hide");

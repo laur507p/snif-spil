@@ -46,6 +46,8 @@ async function loadSVG() {
 
 function start() {
   console.log("start");
+  document.querySelector(".bg-music").play();
+  document.querySelector(".bg-music").volume = 0.1;
   document.querySelector(".intro-memorygame").play();
   document.querySelector(".intro-memorygame").addEventListener("ended", hideBubble);
   document.querySelectorAll(".tile").forEach((tile) => tile.addEventListener("click", flipCard));
