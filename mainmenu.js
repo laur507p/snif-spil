@@ -40,6 +40,10 @@ if (lightMedal === "true") {
     document.querySelector("#el-icon").classList.add("grayscale");
   }
 
+if (elMedal === "true" || waterMedal === "true" || heatMedal === "true" || lightMedal === "true") {
+    window.location.href = "final.html";
+  }
+
 // tjekke om alle er true og vise rigtigt!!
 
 window.addEventListener("load", start);
