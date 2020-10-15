@@ -1,153 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 24.3.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg id="thesvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	  viewBox="0 0 1920 1080" enable-background="new 0 0 1920 1080" xml:space="preserve">
-<g id="rooms_moodboard">
-</g>
-<g id="bathroom">
-	<rect id="backgroundcolor_5_" x="-0.5" y="0" fill="#9B9B9B" width="1920" height="1080"/>
-	<g>
-		<g>
-			<path fill="#D6D6D6" d="M436.2,886H25.7c-6,0-10.8-4.8-10.8-10.8V617.8c0-6,4.8-10.8,10.8-10.8h410.5c6,0,10.8,4.8,10.8,10.8
-				v257.4C447,881.2,442.2,886,436.2,886z"/>
-		</g>
-		<g>
-			<rect x="1360" y="605" fill="#EAEAEA" width="432" height="281.4"/>
-		</g>
-		<g>
-			<path fill="#D6D6D6" d="M1919.5,605.6v279.8h-100.6c-5.9,0-10.7-4.8-10.7-10.8l0.3-268.6L1919.5,605.6z"/>
-		</g>
-		<g>
-			<polygon fill="#D6D6D6" points="1919.5,17.6 1919.5,297.4 1815.5,297 1815.5,18 			"/>
-		</g>
-		<g>
-			<polygon fill="#D6D6D6" points="0.4,311.5 0.4,591.3 114.5,591 114.5,312 			"/>
-		</g>
+<svg id="thesvg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	y="0px" viewBox="0 0 1920 1080" enable-background="new 0 0 1920 1080" xml:space="preserve">
+	<g id="rooms_moodboard">
 	</g>
-	<g id="tiles">
-		<g class="tile"  data-id="1">
-			<rect class="front-side" x="129" y="312" rx="10" ry="10" fill="#F2F2F2" width="432" height="279"/>
-			<use class="back-side" href="#image_01" x="129" y="312" rx="10" ry="10" width="432" height="279">
+	<g id="bathroom">
+		<rect id="backgroundcolor_5_" x="-0.5" y="0" fill="#9B9B9B" width="1920" height="1080" />
+		<g>
+			<g>
+				<path fill="#D6D6D6" d="M436.2,886H25.7c-6,0-10.8-4.8-10.8-10.8V617.8c0-6,4.8-10.8,10.8-10.8h410.5c6,0,10.8,4.8,10.8,10.8
+				v257.4C447,881.2,442.2,886,436.2,886z" />
+			</g>
+			<g>
+				<rect x="1360" y="605" fill="#EAEAEA" width="432" height="281.4" />
+			</g>
+			<g>
+				<path fill="#D6D6D6" d="M1919.5,605.6v279.8h-100.6c-5.9,0-10.7-4.8-10.7-10.8l0.3-268.6L1919.5,605.6z" />
+			</g>
+			<g>
+				<polygon fill="#D6D6D6" points="1919.5,17.6 1919.5,297.4 1815.5,297 1815.5,18 			" />
+			</g>
+			<g>
+				<polygon fill="#D6D6D6" points="0.4,311.5 0.4,591.3 114.5,591 114.5,312 			" />
+			</g>
 		</g>
-		<g class="tile"  data-id="2">
-			<rect class="front-side" x="576" y="312" rx="10" ry="10" fill="#F2F2F2" width="432" height="279"/>
-			<use class="back-side" href="#image_02" x="576" y="312" rx="10" ry="10">
+		<g id="tiles">
+			<g class="tile" data-id="1">
+				<rect class="front-side" x="129" y="312" rx="10" ry="10" fill="#F2F2F2" width="432" height="279" />
+				<use class="back-side" href="#image_01" x="129" y="312" rx="10" ry="10" width="432" height="279">
+			</g>
+			<g class="tile" data-id="2">
+				<rect class="front-side" x="576" y="312" rx="10" ry="10" fill="#F2F2F2" width="432" height="279" />
+				<use class="back-side" href="#image_02" x="576" y="312" rx="10" ry="10">
+			</g>
+			<g class="tile" data-id="3">
+				<rect class="front-side" x="1025.1" y="312" rx="10" ry="10" fill="#F2F2F2" width="432" height="279" />
+				<use class="back-side" href="#image_03" x="1025.1" y="312" rx="10" ry="10">
+			</g>
+			<g class="tile" data-id="4">
+				<rect class="front-side" x="1473.1" y="312" rx="10" ry="10" fill="#F2F2F2" width="432" height="279" />
+				<use class="back-side" href="#image_04" x="1473.1" y="312" rx="10" ry="10">
+			</g>
+			<g class="tile" data-id="5">
+				<rect class="front-side" x="19" y="17" rx="10" ry="10" fill="#F2F2F2" width="432" height="279" />
+				<use class="back-side" href="#image_05" x="19" y="17" rx="10" ry="10">
+			</g>
+			<g class="tile" data-id="1">
+				<rect class="front-side" x="468" y="17" rx="10" ry="10" fill="#F2F2F2" width="432" height="279.4" />
+				<use class="back-side" href="#image_01" x="468" y="17" rx="10" ry="10">
+			</g>
+			<g class="tile" data-id="2">
+				<rect class="front-side" x="911" y="607" rx="10" ry="10" fill="#F2F2F2" width="432" height="279.4" />
+				<use class="back-side" href="#image_02" x="911" y="607" rx="10" ry="10">
+			</g>
+			<g class="tile" data-id="3">
+				<rect class="front-side" x="918" y="17" rx="10" ry="10" fill="#F2F2F2" width="432" height="279.4" />
+				<use class="back-side" href="#image_03" x="918" y="17" rx="10" ry="10">
+			</g>
+			<g class="tile" data-id="4">
+				<rect class="front-side" x="1368" y="17" rx="10" ry="10" fill="#F2F2F2" width="432" height="279.4" />
+				<use class="back-side" href="#image_04" x="1368" y="17" rx="10" ry="10">
+			</g>
+			<g class="tile" data-id="5">
+				<rect class="front-side" x="463" y="607" rx="10" ry="10" fill="#F2F2F2" width="432" height="279.4" />
+				<use class="back-side" href="#image_05" x="463" y="607" rx="10" ry="10">
+			</g>
 		</g>
-		<g class="tile"  data-id="3">
-			<rect class="front-side" x="1025.1" y="312" rx="10" ry="10" fill="#F2F2F2" width="432" height="279"/>
-			<use class="back-side" href="#image_03" x="1025.1" y="312" rx="10" ry="10">
-		</g>
-		<g class="tile"  data-id="4">
-			<rect class="front-side" x="1473.1" y="312" rx="10" ry="10" fill="#F2F2F2" width="432" height="279"/>
-			<use class="back-side" href="#image_04" x="1473.1" y="312" rx="10" ry="10">
-		</g>
-		<g class="tile"  data-id="5">
-			<rect class="front-side" x="19" y="17" rx="10" ry="10" fill="#F2F2F2" width="432" height="279"/>
-			<use class="back-side" href="#image_05" x="19" y="17" rx="10" ry="10">
-		</g>
-		<g class="tile"  data-id="1">
-			<rect class="front-side" x="468" y="17" rx="10" ry="10" fill="#F2F2F2" width="432" height="279.4"/>
-			<use class="back-side" href="#image_01" x="468" y="17" rx="10" ry="10">
-		</g>
-		<g class="tile"  data-id="2">
-			<rect class="front-side" x="911" y="607" rx="10" ry="10" fill="#F2F2F2" width="432" height="279.4"/>
-			<use class="back-side" href="#image_02" x="911" y="607" rx="10" ry="10">
-		</g>
-		<g class="tile"  data-id="3">
-			<rect class="front-side" x="918" y="17" rx="10" ry="10" fill="#F2F2F2" width="432" height="279.4"/>
-			<use class="back-side" href="#image_03" x="918" y="17" rx="10" ry="10">
-		</g>
-		<g class="tile"  data-id="4">
-			<rect class="front-side" x="1368" y="17" rx="10" ry="10" fill="#F2F2F2" width="432" height="279.4"/>
-			<use class="back-side" href="#image_04" x="1368" y="17" rx="10" ry="10">
-		</g>
-		<g class="tile"  data-id="5">
-			<rect class="front-side" x="463" y="607" rx="10" ry="10" fill="#F2F2F2" width="432" height="279.4"/>
-			<use class="back-side" href="#image_05" x="463" y="607" rx="10" ry="10">
-		</g>
-	</g>
-	<g>
-		<path fill="none" d="M550.3,312c6,0,10.8,4.8,10.8,10.8v257.4c0,6-4.8,10.8-10.8,10.8H139.8c-6,0-10.8-4.8-10.8-10.8V322.8
+		<g>
+			<path fill="none" d="M550.3,312c6,0,10.8,4.8,10.8,10.8v257.4c0,6-4.8,10.8-10.8,10.8H139.8c-6,0-10.8-4.8-10.8-10.8V322.8
 			c0-6,4.8-10.8,10.8-10.8H550.3 M550.3,296H139.8c-14.8,0-26.8,12-26.8,26.8v257.4c0,14.8,12,26.8,26.8,26.8h410.5
-			c14.8,0,26.8-12,26.8-26.8V322.8C577,308,565,296,550.3,296L550.3,296z"/>
-		<path fill="none" d="M997.3,312c6,0,10.8,4.8,10.8,10.8v257.4c0,6-4.8,10.8-10.8,10.8H586.8c-6,0-10.8-4.8-10.8-10.8V322.8
+			c14.8,0,26.8-12,26.8-26.8V322.8C577,308,565,296,550.3,296L550.3,296z" />
+			<path fill="none" d="M997.3,312c6,0,10.8,4.8,10.8,10.8v257.4c0,6-4.8,10.8-10.8,10.8H586.8c-6,0-10.8-4.8-10.8-10.8V322.8
 			c0-6,4.8-10.8,10.8-10.8H997.3 M997.3,298H586.8c-13.7,0-24.8,11.1-24.8,24.8v257.4c0,13.7,11.1,24.8,24.8,24.8h410.5
-			c13.7,0,24.8-11.1,24.8-24.8V322.8C1022,309.1,1010.9,298,997.3,298L997.3,298z"/>
-		<path fill="none" d="M1446.4,312c6,0,10.8,4.8,10.8,10.8v257.4c0,6-4.8,10.8-10.8,10.8h-410.5c-6,0-10.8-4.8-10.8-10.8V322.8
+			c13.7,0,24.8-11.1,24.8-24.8V322.8C1022,309.1,1010.9,298,997.3,298L997.3,298z" />
+			<path fill="none" d="M1446.4,312c6,0,10.8,4.8,10.8,10.8v257.4c0,6-4.8,10.8-10.8,10.8h-410.5c-6,0-10.8-4.8-10.8-10.8V322.8
 			c0-6,4.8-10.8,10.8-10.8H1446.4 M1446.4,298h-410.5c-13.7,0-24.8,11.1-24.8,24.8v257.4c0,13.7,11.1,24.8,24.8,24.8h410.5
-			c13.7,0,24.8-11.1,24.8-24.8V322.8C1471.1,309.1,1460,298,1446.4,298L1446.4,298z"/>
-		<path fill="none" d="M1894.4,312c6,0,10.8,4.8,10.8,10.8v257.4c0,6-4.8,10.8-10.8,10.8h-410.5c-6,0-10.8-4.8-10.8-10.8V322.8
+			c13.7,0,24.8-11.1,24.8-24.8V322.8C1471.1,309.1,1460,298,1446.4,298L1446.4,298z" />
+			<path fill="none" d="M1894.4,312c6,0,10.8,4.8,10.8,10.8v257.4c0,6-4.8,10.8-10.8,10.8h-410.5c-6,0-10.8-4.8-10.8-10.8V322.8
 			c0-6,4.8-10.8,10.8-10.8H1894.4 M1894.4,298h-410.5c-13.7,0-24.8,11.1-24.8,24.8v257.4c0,13.7,11.1,24.8,24.8,24.8h410.5
-			c13.7,0,24.8-11.1,24.8-24.8V322.8C1919.2,309.1,1908.1,298,1894.4,298L1894.4,298z"/>
-		<path fill="none" d="M440.2,17c6,0,10.8,4.8,10.8,10.8v257.4c0,6-4.8,10.8-10.8,10.8H29.7c-6,0-10.8-4.8-10.8-10.8V27.8
+			c13.7,0,24.8-11.1,24.8-24.8V322.8C1919.2,309.1,1908.1,298,1894.4,298L1894.4,298z" />
+			<path fill="none" d="M440.2,17c6,0,10.8,4.8,10.8,10.8v257.4c0,6-4.8,10.8-10.8,10.8H29.7c-6,0-10.8-4.8-10.8-10.8V27.8
 			c0-6,4.8-10.8,10.8-10.8H440.2 M440.2,1H29.7C15,1,3,13,3,27.8v257.4C3,300,15,312,29.7,312h410.5c14.8,0,26.8-12,26.8-26.8V27.8
-			C467,13,455,1,440.2,1L440.2,1z"/>
-		<path fill="none" d="M889.3,17c6,0,10.8,4.8,10.8,10.8v257.9c0,6-4.8,10.8-10.8,10.8H478.8c-6,0-10.8-4.8-10.8-10.8V27.8
+			C467,13,455,1,440.2,1L440.2,1z" />
+			<path fill="none" d="M889.3,17c6,0,10.8,4.8,10.8,10.8v257.9c0,6-4.8,10.8-10.8,10.8H478.8c-6,0-10.8-4.8-10.8-10.8V27.8
 			c0-6,4.8-10.8,10.8-10.8H889.3 M889.3,1H478.8C464,1,452,13,452,27.8v257.9c0,14.8,12,26.8,26.8,26.8h410.5
-			c14.8,0,26.8-12,26.8-26.8V27.8C916.1,13,904.1,1,889.3,1L889.3,1z"/>
-		<path fill="none" d="M1339.3,17c6,0,10.8,4.8,10.8,10.8v257.9c0,6-4.8,10.8-10.8,10.8H928.8c-6,0-10.8-4.8-10.8-10.8V27.8
+			c14.8,0,26.8-12,26.8-26.8V27.8C916.1,13,904.1,1,889.3,1L889.3,1z" />
+			<path fill="none" d="M1339.3,17c6,0,10.8,4.8,10.8,10.8v257.9c0,6-4.8,10.8-10.8,10.8H928.8c-6,0-10.8-4.8-10.8-10.8V27.8
 			c0-6,4.8-10.8,10.8-10.8H1339.3 M1339.3,1H928.8C914,1,902,13,902,27.8v257.9c0,14.8,12,26.8,26.8,26.8h410.5
-			c14.8,0,26.8-12,26.8-26.8V27.8C1366.1,13,1354.1,1,1339.3,1L1339.3,1z"/>
-		<path fill="none" d="M1789.3,17c6,0,10.8,4.8,10.8,10.8v257.9c0,6-4.8,10.8-10.8,10.8h-410.5c-6,0-10.8-4.8-10.8-10.8V27.8
+			c14.8,0,26.8-12,26.8-26.8V27.8C1366.1,13,1354.1,1,1339.3,1L1339.3,1z" />
+			<path fill="none" d="M1789.3,17c6,0,10.8,4.8,10.8,10.8v257.9c0,6-4.8,10.8-10.8,10.8h-410.5c-6,0-10.8-4.8-10.8-10.8V27.8
 			c0-6,4.8-10.8,10.8-10.8H1789.3 M1789.3,1h-410.5C1364,1,1352,13,1352,27.8v257.9c0,14.8,12,26.8,26.8,26.8h410.5
-			c14.8,0,26.8-12,26.8-26.8V27.8C1816.1,13,1804.1,1,1789.3,1L1789.3,1z"/>
-		<path fill="none" d="M884.3,607c6,0,10.8,4.8,10.8,10.8v257.9c0,6-4.8,10.8-10.8,10.8H473.8c-6,0-10.8-4.8-10.8-10.8V617.8
+			c14.8,0,26.8-12,26.8-26.8V27.8C1816.1,13,1804.1,1,1789.3,1L1789.3,1z" />
+			<path fill="none" d="M884.3,607c6,0,10.8,4.8,10.8,10.8v257.9c0,6-4.8,10.8-10.8,10.8H473.8c-6,0-10.8-4.8-10.8-10.8V617.8
 			c0-6,4.8-10.8,10.8-10.8H884.3 M884.3,591H473.8c-14.8,0-26.8,12-26.8,26.8v257.9c0,14.8,12,26.8,26.8,26.8h410.5
-			c14.8,0,26.8-12,26.8-26.8V617.8C911.1,603,899.1,591,884.3,591L884.3,591z"/>
-		<path fill="none" d="M1332.3,607c6,0,10.8,4.8,10.8,10.8v257.9c0,6-4.8,10.8-10.8,10.8H921.8c-6,0-10.8-4.8-10.8-10.8V617.8
+			c14.8,0,26.8-12,26.8-26.8V617.8C911.1,603,899.1,591,884.3,591L884.3,591z" />
+			<path fill="none" d="M1332.3,607c6,0,10.8,4.8,10.8,10.8v257.9c0,6-4.8,10.8-10.8,10.8H921.8c-6,0-10.8-4.8-10.8-10.8V617.8
 			c0-6,4.8-10.8,10.8-10.8H1332.3 M1332.3,591H921.8c-14.8,0-26.8,12-26.8,26.8v257.9c0,14.8,12,26.8,26.8,26.8h410.5
-			c14.8,0,26.8-12,26.8-26.8V617.8C1359.1,603,1347.1,591,1332.3,591L1332.3,591z"/>
-	</g>
-	<g>
-		<g>
-			<path fill="#FE7EC4" d="M1606.5,896.7h185c25.7,0,46.7-21,46.7-46.7V772c0-25.7-21-46.7-46.7-46.7h-185
-				c-25.7,0-46.7,21-46.7,46.7V850C1559.8,875.7,1580.8,896.7,1606.5,896.7z"/>
-			<path fill="#D15C9F" d="M1800.9,784v13.2c0-16.5-13.5-30-30-30h-145.1c-16.5,0-30,13.5-30,30V784c0-12.1,9.9-22,22-22h161
-				C1791,761.9,1800.9,771.8,1800.9,784z"/>
-			<path fill="#E867B0" d="M1800.9,789.2v48.3c0,12.1-9.9,22-22,22h-161c-12.1,0-22-9.9-22-22v-48.3c0-12.1,9.9-22,22-22h161
-				C1791,767.1,1800.9,777.1,1800.9,789.2z"/>
+			c14.8,0,26.8-12,26.8-26.8V617.8C1359.1,603,1347.1,591,1332.3,591L1332.3,591z" />
 		</g>
 		<g>
-			<path fill="#FFCF36" d="M1625.6,850c-10,32.4-38.3,44.2-95,49.2c-65.8,5.8-120.7-14.3-118.4-59.2c6.9-53.3,50.8-40,48.2-57
+			<g>
+				<path fill="#FE7EC4" d="M1606.5,896.7h185c25.7,0,46.7-21,46.7-46.7V772c0-25.7-21-46.7-46.7-46.7h-185
+				c-25.7,0-46.7,21-46.7,46.7V850C1559.8,875.7,1580.8,896.7,1606.5,896.7z" />
+				<path fill="#D15C9F" d="M1800.9,784v13.2c0-16.5-13.5-30-30-30h-145.1c-16.5,0-30,13.5-30,30V784c0-12.1,9.9-22,22-22h161
+				C1791,761.9,1800.9,771.8,1800.9,784z" />
+				<path fill="#E867B0" d="M1800.9,789.2v48.3c0,12.1-9.9,22-22,22h-161c-12.1,0-22-9.9-22-22v-48.3c0-12.1,9.9-22,22-22h161
+				C1791,767.1,1800.9,777.1,1800.9,789.2z" />
+			</g>
+			<g>
+				<path fill="#FFCF36" d="M1625.6,850c-10,32.4-38.3,44.2-95,49.2c-65.8,5.8-120.7-14.3-118.4-59.2c6.9-53.3,50.8-40,48.2-57
 				c-13.7-10.7-22.4-26.8-22.4-44.7c0-32.2,28-58.3,62.5-58.3c34.5,0,62.5,26.1,62.5,58.3c0,16.6-7.4,31.5-19.3,42.1
-				c0,0,0.9,3.7,5.9,1.2c7.7-3.8,20.3-34.5,40-30c18.3,4.2,15,20.8,19.2,27.5C1640.6,824.2,1625.6,850,1625.6,850z"/>
-			
-				<ellipse transform="matrix(0.3529 -0.9357 0.9357 0.3529 279.1606 1867.5928)" fill="#3C3C3C" cx="1489.8" cy="732" rx="12" ry="8.1"/>
-			
-				<ellipse transform="matrix(0.5755 -0.8178 0.8178 0.5755 38.9289 1527.3115)" fill="#FFFFFF" cx="1490.7" cy="726.2" rx="4.5" ry="3.1"/>
-			<path fill="#FF9AA4" d="M1427.3,760c0,0-29.9-13.6-17.4-28c10.8-9.5,15.8,0.5,22.4-0.3c4.2-0.8,6.7-5,11.1-2.7
-				c6.1,3.2,13.5,11.3,16.9,15.2c3.7,4.2,19.5,9.2,19.5,17.5c0,15.1-43.3,25.8-55,15C1417.3,769.2,1427.3,760,1427.3,760z"/>
-			<path fill="#FF6679" d="M1427.3,760c0,0-14.2,25,25.8,10.8c4.1-1.4,10-5,9.2-10.8c-1.7-7.5-14.8-1.9-21.7-5
-				c-6.4-2.9-11.7-18.3-25.8-13.3C1402.4,748.6,1427.3,760,1427.3,760z"/>
-			<path fill="none" stroke="#FF9AA4" stroke-miterlimit="10" d="M1439.6,754.5c0,0-14.5,13.5-7,15.1c17.1,3.8,24.7-13.5,24.7-13.5"
-				/>
-			<path fill="#FFE088" d="M1594,821.7c-5.6,1.7-35.8-19.2-60.8,2.5c-18.3,15.9,4.2,61.7,28.3,58.3c25-3.4,17.5-23.3,27.5-32.5
-				c3.5-3.2,14.9,4.1,25.8-14.2c5-8.3,0-26.7-8.3-26.7C1598.1,809.2,1602.3,819.2,1594,821.7z"/>
-		</g>
-		<g>
-			<circle fill="#C6E5E2" cx="1787.3" cy="717" r="31.2"/>
-			<circle fill="#C6E5E2" cx="1808.5" cy="759" r="23"/>
-			<circle fill="#C6E5E2" cx="1833.6" cy="724.6" r="23"/>
-			<circle fill="#C6E5E2" cx="1647.7" cy="871.5" r="28.7"/>
-			<circle fill="#C6E5E2" cx="1606.9" cy="876" r="22.8"/>
+				c0,0,0.9,3.7,5.9,1.2c7.7-3.8,20.3-34.5,40-30c18.3,4.2,15,20.8,19.2,27.5C1640.6,824.2,1625.6,850,1625.6,850z" />
+
+				<ellipse transform="matrix(0.3529 -0.9357 0.9357 0.3529 279.1606 1867.5928)" fill="#3C3C3C" cx="1489.8"
+					cy="732" rx="12" ry="8.1" />
+
+				<ellipse transform="matrix(0.5755 -0.8178 0.8178 0.5755 38.9289 1527.3115)" fill="#FFFFFF" cx="1490.7"
+					cy="726.2" rx="4.5" ry="3.1" />
+				<path fill="#FF9AA4"
+					d="M1427.3,760c0,0-29.9-13.6-17.4-28c10.8-9.5,15.8,0.5,22.4-0.3c4.2-0.8,6.7-5,11.1-2.7
+				c6.1,3.2,13.5,11.3,16.9,15.2c3.7,4.2,19.5,9.2,19.5,17.5c0,15.1-43.3,25.8-55,15C1417.3,769.2,1427.3,760,1427.3,760z" />
+				<path fill="#FF6679" d="M1427.3,760c0,0-14.2,25,25.8,10.8c4.1-1.4,10-5,9.2-10.8c-1.7-7.5-14.8-1.9-21.7-5
+				c-6.4-2.9-11.7-18.3-25.8-13.3C1402.4,748.6,1427.3,760,1427.3,760z" />
+				<path fill="none" stroke="#FF9AA4" stroke-miterlimit="10"
+					d="M1439.6,754.5c0,0-14.5,13.5-7,15.1c17.1,3.8,24.7-13.5,24.7-13.5" />
+				<path fill="#FFE088" d="M1594,821.7c-5.6,1.7-35.8-19.2-60.8,2.5c-18.3,15.9,4.2,61.7,28.3,58.3c25-3.4,17.5-23.3,27.5-32.5
+				c3.5-3.2,14.9,4.1,25.8-14.2c5-8.3,0-26.7-8.3-26.7C1598.1,809.2,1602.3,819.2,1594,821.7z" />
+			</g>
+			<g>
+				<circle fill="#C6E5E2" cx="1787.3" cy="717" r="31.2" />
+				<circle fill="#C6E5E2" cx="1808.5" cy="759" r="23" />
+				<circle fill="#C6E5E2" cx="1833.6" cy="724.6" r="23" />
+				<circle fill="#C6E5E2" cx="1647.7" cy="871.5" r="28.7" />
+				<circle fill="#C6E5E2" cx="1606.9" cy="876" r="22.8" />
+			</g>
 		</g>
 	</g>
-</g>
-<!-- Foreground -->
-      <use class="foreground" href="foreground.svg#foreground"></use>
-      <use class="taleboble" href="foreground.svg#taleboble"></use>
-<!-- icon placeholders -->
-	   <use class="heat-placeholder" href="foreground.svg#heat-placeholder"></use>
-      <use class="light-placeholder" href="foreground.svg#light-placeholder"></use>
-      <use class="water-placeholder" href="foreground.svg#water-placeholder"></use>
-      <use class="el-placeholder" href="foreground.svg#el-placeholder"></use>
-<!-- icons -->
-	   <use class="heat-icon hide" href="foreground.svg#heat-icon"></use>
-      <use class="light-icon hide" href="foreground.svg#light-icon"></use>
-      <use class="water-icon hide" href="foreground.svg#water-icon"></use>
-      <use class="el-icon hide" href="foreground.svg#el-icon"></use>
-<!-- backbutton -->
-	  <use class="backbutton" href="backbutton.svg#backbutton"></use>
+	<!-- Foreground -->
+	<use class="foreground" href="foreground.svg#foreground"></use>
+	<use class="taleboble pulse" href="foreground.svg#taleboble"></use>
+	<!-- icon placeholders -->
+	<use class="heat-placeholder" href="foreground.svg#heat-placeholder"></use>
+	<use class="light-placeholder" href="foreground.svg#light-placeholder"></use>
+	<use class="water-placeholder" href="foreground.svg#water-placeholder"></use>
+	<use class="el-placeholder" href="foreground.svg#el-placeholder"></use>
+	<!-- icons -->
+	<use class="heat-icon hide" href="foreground.svg#heat-icon"></use>
+	<use class="light-icon hide" href="foreground.svg#light-icon"></use>
+	<use class="water-icon hide" href="foreground.svg#water-icon"></use>
+	<use class="el-icon hide" href="foreground.svg#el-icon"></use>
+	<!-- backbutton -->
+	<use class="backbutton" href="backbutton.svg#backbutton"></use>
 
 
 </svg>

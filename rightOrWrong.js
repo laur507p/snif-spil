@@ -64,14 +64,14 @@ async function start() {
   document.querySelector(".bg-music").play();
   document.querySelector(".bg-music").volume = 0.1;
 
-
-
   createCards();
   document.querySelector(".right_or_wrong_introduction").play();
+  document.querySelector(".right_or_wrong_introduction").addEventListener("ended", removeBubble)
   document.querySelectorAll(".card").forEach((item) => {
     item.addEventListener("click", checkRightorWrong);
   });
 }
+
 
 function removeBubble() {
   document.querySelector(".taleboble").classList.add("hide");
