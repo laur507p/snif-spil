@@ -2,11 +2,28 @@
 
 // siger at lightmedaljen er false til at starte med
 const lightMedal = localStorage.getItem("lightMedal");
+const heatMedal = localStorage.getItem("heatMedal");
+const waterMedal = localStorage.getItem("waterMedal");
+const elMedal = localStorage.getItem("elMedal");
+
 
 if (lightMedal === "true") {
+  document.querySelector(".light-placeholder").classList.add("hide");
+  document.querySelector(".light-icon").classList.remove("hide");
+}
+if (heatMedal === "true") {
   document.querySelector(".heat-placeholder").classList.add("hide");
   document.querySelector(".heat-icon").classList.remove("hide");
 }
+if (waterMedal === "true") {
+  document.querySelector(".water-placeholder").classList.add("hide");
+  document.querySelector(".water-icon").classList.remove("hide");
+}
+if (elMedal === "true") {
+  document.querySelector(".el-placeholder").classList.add("hide");
+  document.querySelector(".el-icon").classList.remove("hide");
+}
+
 
 // when start button is pressed
 let lightChainPoints = 0;
@@ -17,11 +34,16 @@ window.addEventListener("load", start);
 
 function start() {
   document.querySelector(".intro-lightchain").play();
+  document.querySelector(".bg-music").volume = 0.2;
+  document.querySelector(".bg-music").play();
+ 
+
   document.querySelector("#startknap").addEventListener("click", startWhackamole);
 }
 
 function startWhackamole() {
   document.querySelector(".intro-lightchain").pause();
+  document.querySelector(".bg-music").volume = 0.7;
   document.querySelector("#start").classList.add("hide");
   document.querySelector(".taleboble").classList.add("hide");
 
@@ -42,7 +64,7 @@ function randomLightBulbs() {
   const randomcolor = colors[Math.floor(Math.random() * colors.length)];
   const bulbs = document.querySelectorAll(".bulb");
   const randomBulb = bulbs[Math.floor(Math.random() * bulbs.length)];
-  const sound = document.querySelector(".ping-sound");
+  const sound = document.querySelector(".ding-sound");
 
   // Bulbs start lighting up (randomly) and give them a random color
   if (randomBulb.classList.contains("coloredbulb")) {
@@ -51,6 +73,7 @@ function randomLightBulbs() {
     console.log("add color");
     randomBulb.querySelector(".bulb-bg").setAttribute("fill", randomcolor);
     randomBulb.querySelector(".bulb-bg").setAttribute("opacity", "1");
+    sound.currentTime = 0
     sound.play();
 
     // check which color so that the right color can be set for highlights
@@ -83,7 +106,7 @@ function randomLightBulbs() {
     randomBulb.classList.add("coloredbulb");
   }
 
-  whackTimeout = setTimeout(randomLightBulbs, 800);
+  whackTimeout = setTimeout(randomLightBulbs, 900);
 }
 
 function clickBulb() {
@@ -127,11 +150,16 @@ function clickBulb() {
 function whackAMoleEnd() {
   console.log("game over");
   if (lightMedal === "false") {
-    document.querySelector(".heat-placeholder").classList.add("icon-hide");
-    document.querySelector(".heat-icon").classList.remove("hide");
-    document.querySelector(".heat-icon").classList.add("icon-show");
+    document.querySelector(".bg-music").volume = 0.2;
+    document.querySelector(".level-complete").play();
+
+    document.querySelector(".light-placeholder").classList.add("icon-hide");
+    document.querySelector(".light-icon").classList.remove("hide");
+    document.querySelector(".light-icon").classList.add("icon-show");
     // set localstorage
     localStorage.setItem("lightMedal", "true");
+
+
   }
 
   clearTimeout(whackTimeout);
