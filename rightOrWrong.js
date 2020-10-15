@@ -4,6 +4,7 @@ const img_good = document.querySelector(".img_good");
 const img_bad = document.querySelector(".img_bad");
 
 let points = 0;
+let counter = 0;
 
 const xPositions = ["1012", "294"];
 
@@ -21,16 +22,14 @@ const cards = [
     bad: "assets/kitchen_cards_06.svg",
   },
   {
-    good: "assets/kitchen_cards_07.svg",
-    bad: "assets/kitchen_cards_08.svg",
-  },
-  {
     good: "assets/kitchen_cards_09.svg",
     bad: "assets/kitchen_cards_10.svg",
   },
+  {
+    good: "assets/kitchen_cards_07.svg",
+    bad: "assets/kitchen_cards_08.svg",
+  },
 ];
-
-let randomNumber = Math.floor(Math.random() * cards.length);
 let randomNumberX = Math.floor(Math.random() * xPositions.length);
 
 window.addEventListener("load", start);
@@ -43,12 +42,19 @@ async function start() {
 }
 
 function checkRightorWrong(clickedCard) {
+  console.log("test");
+  counter++;
   if (this === img_good) {
     points++;
     // Sniff tells you you are right
   } else {
     // Sniff tells you you are wrong
   }
+
+  //
+  document.querySelector("#curtain_x5F_roll_x5F_down").classList.remove("curtain_rod_roll_up");
+  document.querySelector(".curtain_roll_item").classList.remove("curtain_roll_up");
+
   document.querySelector(".points").textContent = points;
   document.querySelector("#curtain_x5F_roll_x5F_down").classList.add("curtain_rod_roll");
   document.querySelector(".curtain_roll_item").classList.add("curtain_roll");
@@ -86,22 +92,28 @@ function createCards() {
 }
 
 function randomizedCard() {
+  let randomNumber = Math.floor(Math.random() * cards.length);
   let returnCard = cards[randomNumber];
-  console.log(cards);
+  console.log(randomNumber);
 
   return returnCard;
 }
 
 function randomizedXPosition() {
-  let returnCard = xPositions[randomNumber];
+  let returnCard = xPositions[randomNumberX];
 
   return returnCard;
 }
 
 function checkPoints() {
-  if (cards.length === 0) {
-    console.log("stop");
-    document.querySelector(".level_complete").style.visibility = "visible";
+  console.log(cards.lenght);
+  if (counter === 4) {
+    if (points < 5) {
+      console.log("won");
+      start();
+    }
+  } else {
+    console.log("lost");
   }
 }
 
