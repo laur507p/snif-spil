@@ -30,42 +30,64 @@ const cards = [
     bad: "assets/kitchen_cards_08.svg",
   },
 ];
+
 let randomNumberX = Math.floor(Math.random() * xPositions.length);
+
+// siger at lightmedaljen er false til at starte med
+const heatMedal = localStorage.getItem("heatMedal");
+
+if (heatMedal === "true") {
+  document.querySelector(".heat-placeholder").classList.add("hide");
+  document.querySelector(".heat-icon").classList.remove("hide");
+}
 
 window.addEventListener("load", start);
 
 async function start() {
   createCards();
+  document.querySelector(".right_or_wrong_introduction").play();
   document.querySelectorAll(".card").forEach((item) => {
     item.addEventListener("click", checkRightorWrong);
   });
 }
 
+function removeBubble() {
+  document.querySelector(".taleboble").classList.add("hide");
+}
+
 function checkRightorWrong(clickedCard) {
+  document.querySelector(".right_or_wrong_introduction").pause();
   console.log("test");
   counter++;
   if (this === img_good) {
     points++;
     // Sniff tells you you are right
+    document.querySelector(".right_or_wrong_right").currentTime = 0;
+    document.querySelector(".right_or_wrong_right").play();
   } else {
     // Sniff tells you you are wrong
+    document.querySelector(".right_or_wrong_wrong").currentTime = 0;
+    document.querySelector(".right_or_wrong_wrong").play();
   }
 
   //
   document.querySelector("#curtain_x5F_roll_x5F_down").classList.remove("curtain_rod_roll_up");
   document.querySelector(".curtain_roll_item").classList.remove("curtain_roll_up");
 
-  document.querySelector(".points").textContent = points;
   document.querySelector("#curtain_x5F_roll_x5F_down").classList.add("curtain_rod_roll");
   document.querySelector(".curtain_roll_item").classList.add("curtain_roll");
   document.querySelector("#curtain_x5F_roll_x5F_down").addEventListener("animationend", addAnimationRollUp);
   checkPoints();
+  removeBubble();
 }
 
 function addAnimationRollUp() {
-  document.querySelector("#curtain_x5F_roll_x5F_down").removeEventListener("animationend", addAnimationRollUp);
-  document.querySelector("#curtain_x5F_roll_x5F_down").classList.remove("curtain_rod_roll");
-  document.querySelector(".curtain_roll_item").classList.remove("curtain_roll");
+  if (counter < 5) {
+    console.log("if setning");
+    document.querySelector("#curtain_x5F_roll_x5F_down").removeEventListener("animationend", addAnimationRollUp);
+    document.querySelector("#curtain_x5F_roll_x5F_down").classList.remove("curtain_rod_roll");
+    document.querySelector(".curtain_roll_item").classList.remove("curtain_roll");
+  }
   createCards();
   addCurtainUp();
 }
@@ -81,12 +103,14 @@ function createCards() {
   });
 
   const rc = randomizedCard();
+  const indexRC = cards.indexOf(rc);
+  const randomX = randomizedXPosition();
 
   console.log(rc);
   img_good.setAttribute("href", rc.good);
   img_bad.setAttribute("href", rc.bad);
 
-  cards.splice(rc, 1);
+  cards.splice(indexRC, 1);
 
   return rc;
 }
@@ -106,15 +130,32 @@ function randomizedXPosition() {
 }
 
 function checkPoints() {
-  console.log(cards.lenght);
-  if (counter === 4) {
-    if (points < 5) {
+  console.log(counter);
+  if (counter === 5) {
+    if (points > 4) {
+      if (heatMedal === "false") {
+        document.querySelector(".heat-placeholder").classList.add("icon-hide");
+        document.querySelector(".heat-icon").classList.remove("hide");
+        document.querySelector(".heat-icon").classList.add("icon-show");
+        // set localstorage
+        localStorage.setItem("heatMedal", "true");
+      }
       console.log("won");
       start();
+      document.querySelector(".right_or_wrong_right").pause();
+      document.querySelector(".right_or_wrong_completed").play();
+    } else {
+      document.querySelector(".right_or_wrong_wrong").pause();
+      document.querySelector(".right_or_wrong_right").pause();
+      document.querySelector(".right_or_wrong_game_over").play();
+      console.log("lost");
+      document.querySelector(".right_or_wrong_game_over").addEventListener("ended", test);
     }
-  } else {
-    console.log("lost");
   }
+}
+
+function test() {
+  location.reload();
 }
 
 //  Kode jeg måske behøver??
