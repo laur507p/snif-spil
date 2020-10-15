@@ -49,7 +49,11 @@ if (elMedal === "true" && waterMedal === "true" && heatMedal === "true" && light
 window.addEventListener("load", start);
 
 function start() {
-    document.querySelector(".bg-music").play();
     document.querySelector(".intro-sound").play();
-  document.querySelector(".bg-music").volume = 0.1;
+    document.querySelector(".bg-music").play();
+    document.querySelector(".bg-music").volume = 0.1;
+    
+    if (elMedal === "true" || waterMedal === "true" || heatMedal === "true" || lightMedal === "true") {
+        document.querySelector(".intro-sound").pause();
+      }
 }
