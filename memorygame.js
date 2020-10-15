@@ -1,7 +1,4 @@
 "use strict";
-
-document.addEventListener("DOMContentLoaded", loadSVG);
-
 let resultDisplay = document.querySelector("#result");
 let cardHasFlipped = false;
 
@@ -21,6 +18,16 @@ const cardsArray = [
   { name: "#image_05", id: 5 },
   { name: "#image_05", id: 5 },
 ];
+
+document.addEventListener("DOMContentLoaded", loadSVG);
+
+// siger at vandmedaljen er false til at starte med
+const lightMedal = localStorage.getItem("lightMedal");
+const heatMedal = localStorage.getItem("heatMedal");
+const waterMedal = localStorage.getItem("waterMedal");
+const elMedal = localStorage.getItem("elMedal");
+
+console.log("waterMedal", waterMedal);
 
 async function loadSVG() {
   console.log("loadSVG");
@@ -42,6 +49,23 @@ function start() {
   document.querySelector(".intro-memorygame").play();
   document.querySelector(".intro-memorygame").addEventListener("ended", hideBubble);
   document.querySelectorAll(".tile").forEach((tile) => tile.addEventListener("click", flipCard));
+
+  if (lightMedal === "true") {
+    document.querySelector(".light-placeholder").classList.add("hide");
+    document.querySelector(".light-icon").classList.remove("hide");
+  }
+  if (heatMedal === "true") {
+    document.querySelector(".heat-placeholder").classList.add("hide");
+    document.querySelector(".heat-icon").classList.remove("hide");
+  }
+  if (waterMedal === "true") {
+    document.querySelector(".water-placeholder").classList.add("hide");
+    document.querySelector(".water-icon").classList.remove("hide");
+  }
+  if (elMedal === "true") {
+    document.querySelector(".el-placeholder").classList.add("hide");
+    document.querySelector(".el-icon").classList.remove("hide");
+  }
   randomizeCards();
   displayCards();
 }
@@ -95,6 +119,7 @@ function checkForMatch() {
   if (firstChosenCard.dataset.id === secondChosenCard.dataset.id) {
     //Play match sound
     document.querySelector(".match-sound").play();
+    console.log("match-sound");
     //If cards match, push to cards matched cards array, to keep count of how many matches have been made
     cardsMatched.push(cardsChosen);
     console.log("cards matched", cardsMatched);
@@ -106,8 +131,8 @@ function checkForMatch() {
   //Emptying the cards chosen array after checking for match
   cardsChosen = [];
 
-  //Updating the score
-  updateScore();
+  //Check number of matches
+  checkMatches();
 }
 
 function disableCards() {
@@ -138,13 +163,12 @@ function randomizeCards() {
   cardsArray.sort(() => Math.random() - 0.5);
 }
 
-function updateScore() {
-  console.log("updateScore");
-  resultDisplay.textContent = cardsMatched.length;
+function checkMatches() {
+  console.log("checkMatches");
   if (cardsMatched.length === 5) {
-    resultDisplay.textContent = "Tillykke, du har vundet spillet!";
-    setTimeOut(gameComplete, 500);
+    document.querySelector(".match-sound").addEventListener("ended", gameComplete);
   }
+  //   document.querySelector(".match-sound").addEventListener("ended", gameComplete);
 }
 
 function lockBoard() {
@@ -159,7 +183,17 @@ function unlockBoard() {
 
 function gameComplete() {
   console.log("gameComplete");
-  document.querySelector(".memorygame-complete").play();
+
+  if (waterMedal === "false") {
+    document.querySelector(".memorygame-complete").play();
+
+    document.querySelector(".water-placeholder").classList.add("icon-hide");
+    document.querySelector(".water-icon").classList.remove("hide");
+    document.querySelector(".water-icon").classList.add("icon-show");
+    // set localstorage
+    localStorage.setItem("waterMedal", "true");
+    console.log(waterMedal);
+  }
 }
 
 function hideBubble() {

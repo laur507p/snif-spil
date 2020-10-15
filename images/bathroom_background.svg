@@ -8,7 +8,7 @@
 	<rect id="backgroundcolor_5_" x="-0.5" y="0" fill="#9B9B9B" width="1920" height="1080"/>
 	<g>
 		<g>
-			<path fill="#EAEAEA" d="M436.2,886H25.7c-6,0-10.8-4.8-10.8-10.8V617.8c0-6,4.8-10.8,10.8-10.8h410.5c6,0,10.8,4.8,10.8,10.8
+			<path fill="#D6D6D6" d="M436.2,886H25.7c-6,0-10.8-4.8-10.8-10.8V617.8c0-6,4.8-10.8,10.8-10.8h410.5c6,0,10.8,4.8,10.8,10.8
 				v257.4C447,881.2,442.2,886,436.2,886z"/>
 		</g>
 		<g>
@@ -18,7 +18,7 @@
 			<path fill="#D6D6D6" d="M1919.5,605.6v279.8h-100.6c-5.9,0-10.7-4.8-10.7-10.8l0.3-268.6L1919.5,605.6z"/>
 		</g>
 		<g>
-			<polygon fill="#EAEAEA" points="1919.5,17.6 1919.5,297.4 1815.5,297 1815.5,18 			"/>
+			<polygon fill="#D6D6D6" points="1919.5,17.6 1919.5,297.4 1815.5,297 1815.5,18 			"/>
 		</g>
 		<g>
 			<polygon fill="#D6D6D6" points="0.4,311.5 0.4,591.3 114.5,591 114.5,312 			"/>
@@ -30,7 +30,7 @@
 			<use class="back-side" href="#image_01" x="129" y="312" rx="10" ry="10" width="432" height="279">
 		</g>
 		<g class="tile"  data-id="2">
-			<rect class="front-side" x="576" y="312" rx="10" ry="10" fill="#EAEAEA" width="432" height="279"/>
+			<rect class="front-side" x="576" y="312" rx="10" ry="10" fill="#F2F2F2" width="432" height="279"/>
 			<use class="back-side" href="#image_02" x="576" y="312" rx="10" ry="10">
 		</g>
 		<g class="tile"  data-id="3">
@@ -38,19 +38,19 @@
 			<use class="back-side" href="#image_03" x="1025.1" y="312" rx="10" ry="10">
 		</g>
 		<g class="tile"  data-id="4">
-			<rect class="front-side" x="1473.1" y="312" rx="10" ry="10" fill="#D6D6D6" width="432" height="279"/>
+			<rect class="front-side" x="1473.1" y="312" rx="10" ry="10" fill="#F2F2F2" width="432" height="279"/>
 			<use class="back-side" href="#image_04" x="1473.1" y="312" rx="10" ry="10">
 		</g>
 		<g class="tile"  data-id="5">
-			<rect class="front-side" x="19" y="17" rx="10" ry="10" fill="#EAEAEA" width="432" height="279"/>
+			<rect class="front-side" x="19" y="17" rx="10" ry="10" fill="#F2F2F2" width="432" height="279"/>
 			<use class="back-side" href="#image_05" x="19" y="17" rx="10" ry="10">
 		</g>
 		<g class="tile"  data-id="1">
-			<rect class="front-side" x="468" y="17" rx="10" ry="10" fill="#D6D6D6" width="432" height="279.4"/>
+			<rect class="front-side" x="468" y="17" rx="10" ry="10" fill="#F2F2F2" width="432" height="279.4"/>
 			<use class="back-side" href="#image_01" x="468" y="17" rx="10" ry="10">
 		</g>
 		<g class="tile"  data-id="2">
-			<rect class="front-side" x="911" y="607" rx="10" ry="10" fill="#D6D6D6" width="432" height="279.4"/>
+			<rect class="front-side" x="911" y="607" rx="10" ry="10" fill="#F2F2F2" width="432" height="279.4"/>
 			<use class="back-side" href="#image_02" x="911" y="607" rx="10" ry="10">
 		</g>
 		<g class="tile"  data-id="3">
@@ -58,7 +58,7 @@
 			<use class="back-side" href="#image_03" x="918" y="17" rx="10" ry="10">
 		</g>
 		<g class="tile"  data-id="4">
-			<rect class="front-side" x="1368" y="17" rx="10" ry="10" fill="#EAEAEA" width="432" height="279.4"/>
+			<rect class="front-side" x="1368" y="17" rx="10" ry="10" fill="#F2F2F2" width="432" height="279.4"/>
 			<use class="back-side" href="#image_04" x="1368" y="17" rx="10" ry="10">
 		</g>
 		<g class="tile"  data-id="5">
@@ -133,20 +133,20 @@
 		</g>
 	</g>
 </g>
-
+<!-- Foreground -->
       <use class="foreground" href="foreground.svg#foreground"></use>
       <use class="taleboble" href="foreground.svg#taleboble"></use>
-
+<!-- icon placeholders -->
 	   <use class="heat-placeholder" href="foreground.svg#heat-placeholder"></use>
       <use class="light-placeholder" href="foreground.svg#light-placeholder"></use>
       <use class="water-placeholder" href="foreground.svg#water-placeholder"></use>
       <use class="el-placeholder" href="foreground.svg#el-placeholder"></use>
-
+<!-- icons -->
 	   <use class="heat-icon hide" href="foreground.svg#heat-icon"></use>
       <use class="light-icon hide" href="foreground.svg#light-icon"></use>
       <use class="water-icon hide" href="foreground.svg#water-icon"></use>
       <use class="el-icon hide" href="foreground.svg#el-icon"></use>
-
+<!-- backbutton -->
 	  <use class="backbutton" href="backbutton.svg#backbutton"></use>
 
 

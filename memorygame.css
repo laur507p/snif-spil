@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #8888ba;
+}
+
+h3,
+span {
+  text-align: center;
+  font-size: 3rem;
+}
+
 .front-side {
   backface-visibility: hidden;
   animation: fadeIn 0.5s ease;
@@ -21,8 +31,9 @@
   cursor: pointer;
 }
 
-.tile rect {
-  border-radius: 25px;
+.tile rect:hover {
+  stroke: #71e2d0;
+  stroke-width: 5px;
 }
 
 .flip {
