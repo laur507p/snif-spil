@@ -40,7 +40,7 @@ if (lightMedal === "true") {
     document.querySelector("#el-icon").classList.add("grayscale");
   }
 
-if (elMedal === "true" || waterMedal === "true" || heatMedal === "true" || lightMedal === "true") {
+if (elMedal === "true" && waterMedal === "true" && heatMedal === "true" && lightMedal === "true") {
     window.location.href = "final.html";
   }
 
