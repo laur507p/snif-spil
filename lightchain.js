@@ -43,7 +43,7 @@ function start() {
 
 function startWhackamole() {
   document.querySelector(".intro-lightchain").pause();
-  document.querySelector(".bg-music").volume = 0.7;
+  document.querySelector(".bg-music").volume = 0.4;
   document.querySelector("#start").classList.add("hide");
   document.querySelector(".taleboble").classList.add("hide");
 
@@ -150,7 +150,7 @@ function clickBulb() {
 function whackAMoleEnd() {
   console.log("game over");
   if (lightMedal === "false") {
-    document.querySelector(".bg-music").volume = 0.2;
+    document.querySelector(".bg-music").volume = 0.1;
     document.querySelector(".level-complete").play();
 
     document.querySelector(".light-placeholder").classList.add("icon-hide");
