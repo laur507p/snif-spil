@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="295" height="143" viewBox="0 0 295 143">
+  <defs>
+    <clipPath id="clip-genstart_knap_orange">
+      <rect width="295" height="143"/>
+    </clipPath>
+  </defs>
+  <g id="genstart_knap_orange" clip-path="url(#clip-genstart_knap_orange)">
+    <rect width="295" height="143" fill="#fff"/>
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="218" height="99" rx="35" transform="translate(33 26)" fill="#ff884d"/>
+    <text id="GENSTART" transform="translate(49 56)" fill="#fff" font-size="40" font-family="Chaloops-Bold, Chaloops" font-weight="700"><tspan x="0" y="32">GENSTART</tspan></text>
+  </g>
+</svg>
