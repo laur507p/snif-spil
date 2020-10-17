@@ -27,4 +27,15 @@ function startClick() {
 
   // play intro sound
   document.querySelector(".introsound").play();
+
+  document.querySelector("#startcreen_mouth").classList.add("talk");
+  document.querySelector(".introsound").addEventListener("ended", snifStopTalking);
+  document.querySelector("#startscreen_taleboble").classList.add("scaleUpStartScreen");
+}
+
+function snifStopTalking() {
+  console.log("snifStopTalking");
+  document.querySelector("#startcreen_mouth").classList.remove("talk");
+  document.querySelector("#startscreen_taleboble").classList.remove("scaleUpStartScreen");
+  document.querySelector("#startscreen_taleboble").classList.add("scaleDownStartScreen");
 }
