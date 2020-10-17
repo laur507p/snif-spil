@@ -6,7 +6,6 @@ const heatMedal = localStorage.getItem("heatMedal");
 const waterMedal = localStorage.getItem("waterMedal");
 const elMedal = localStorage.getItem("elMedal");
 
-
 if (lightMedal === "true") {
   document.querySelector(".light-placeholder").classList.add("hide");
   document.querySelector(".light-icon").classList.remove("hide");
@@ -24,7 +23,6 @@ if (elMedal === "true") {
   document.querySelector(".el-icon").classList.remove("hide");
 }
 
-
 // when start button is pressed
 let lightChainPoints = 0;
 let whackTimeout;
@@ -33,7 +31,8 @@ let energy = 0;
 window.addEventListener("load", start);
 
 function start() {
-  document.querySelector(".intro-lightchain").play();
+  startSnifIntroduction();
+  // document.querySelector(".intro-lightchain").play();
   document.querySelector(".bg-music").play();
 
   document.querySelector(".bg-music").volume = 0.1;
@@ -42,10 +41,6 @@ function start() {
 }
 
 function startWhackamole() {
-  console.log("start")
- 
-  document.querySelector(".taleboble").classList.add("hide");
-
   console.log("start");
 
   // call a random lightbulb
@@ -72,7 +67,7 @@ function randomLightBulbs() {
     console.log("add color");
     randomBulb.querySelector(".bulb-bg").setAttribute("fill", randomcolor);
     randomBulb.querySelector(".bulb-bg").setAttribute("opacity", "1");
-    sound.currentTime = 0
+    sound.currentTime = 0;
     sound.volume = 0.1;
     sound.play();
 
@@ -150,7 +145,6 @@ function clickBulb() {
 function whackAMoleEnd() {
   console.log("game over");
   if (lightMedal === "false") {
-  
     document.querySelector(".level-complete").play();
 
     // You receive the light medal
@@ -169,4 +163,32 @@ function whackAMoleEnd() {
 
 function backToMenu() {
   window.location.href = "mainmenu.html";
+}
+
+function startSnifIntroduction() {
+  console.log("startSnifIntroduction");
+  document.querySelector("#snif_container").classList.add("rotate");
+  snifStartTalking();
+  //   document.querySelector(".mouth").classList.add("talk");
+  document.querySelector("#taleboble_container").classList.add("scaleUp");
+  document.querySelector(".taleboble").classList.add("pulse-small");
+  document.querySelector(".intro-lightchain").play();
+  document.querySelector(".intro-lightchain").addEventListener("ended", endSnifIntroduction);
+}
+
+function endSnifIntroduction() {
+  console.log("endSnifIntroduction");
+  //   document.querySelector("#snif_container").classList.remove("rotate");
+  snifStopTalking();
+  document.querySelector("#taleboble_container").classList.remove("scaleUp");
+  document.querySelector("#taleboble_container").classList.add("scaleDown");
+}
+
+function snifStartTalking() {
+  document.querySelector(".mouth").classList.add("talk");
+  console.log("startTalking");
+}
+function snifStopTalking() {
+  document.querySelector(".mouth").classList.remove("talk");
+  console.log("stopTalking");
 }

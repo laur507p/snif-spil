@@ -66,7 +66,6 @@ async function start() {
 
   createCards();
   document.querySelector(".right_or_wrong_introduction").play();
-  document.querySelector(".right_or_wrong_introduction").addEventListener("ended", removeBubble);
   document.querySelectorAll(".card").forEach((item) => {
     item.addEventListener("click", checkRightorWrong);
   });

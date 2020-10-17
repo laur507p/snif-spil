@@ -153,3 +153,91 @@ body {
     transform: translate(20px, -10px);
   }
 } */
+
+.rotate {
+  animation-name: rotate_kf;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes rotate_kf {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.scaleDown {
+  animation: scaleDown 1s 1;
+  transform-box: fill-box;
+  transform-origin: bottom left;
+  animation-fill-mode: forwards;
+}
+
+.scaleDownStartScreen {
+  animation: scaleDown 1s 1;
+  transform-box: fill-box;
+  transform-origin: bottom right;
+  animation-fill-mode: forwards;
+}
+
+.scaleUp {
+  animation: scaleUp 1s 1;
+  transform-box: fill-box;
+  transform-origin: bottom left;
+}
+
+.scaleUpStartScreen {
+  animation: scaleUp 1s 1;
+  transform-box: fill-box;
+  transform-origin: bottom right;
+}
+
+@keyframes scaleDown {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.talk {
+  animation-name: talk;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes talk {
+  0% {
+    transform: scaleY(1);
+  }
+
+  50% {
+    transform: scaleY(1.5);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}

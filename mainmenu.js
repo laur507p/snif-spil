@@ -44,6 +44,8 @@ window.addEventListener("load", start);
 function start() {
   document.querySelector(".intro-sound").play();
   document.querySelector(".bg-music").play();
+  document.querySelector("#mainmenu_mouth").classList.add("talk");
+  document.querySelector(".intro-sound").addEventListener("ended", snifStopTalking);
   document.querySelector(".bg-music").volume = 0.1;
 
   if (elMedal === "true" || waterMedal === "true" || heatMedal === "true" || lightMedal === "true") {
