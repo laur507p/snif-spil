@@ -102,3 +102,54 @@ body {
     transform: scale(1);
   }
 }
+
+.flicker {
+  animation: flicker 2.5s infinite;
+  animation-fill-mode: forwards;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0.8;
+  }
+
+  80% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .lamp-tilt {
+  animation: lamp-tilt 2.5s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  transform-box: fill-box;
+  transform-origin: top center;
+}
+
+@keyframes lamp-tilt {
+  0% {
+    transform: translate(20px, -10px);
+  }
+
+  50% {
+    transform: translate(-20px, 10px);
+  }
+
+  100% {
+    transform: translate(20px, -10px);
+  }
+} */

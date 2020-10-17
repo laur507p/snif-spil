@@ -56,6 +56,8 @@ function start() {
   document.querySelector(".bg-music").volume = 0.1;
   document.querySelector(".bg-music").play()
 
+  document.querySelector(".tv-sound").volume = 1;
+  document.querySelector(".tv-sound").play()
 
   introAudio.addEventListener("ended", hideBubble)
 
@@ -67,7 +69,6 @@ function start() {
 
 function hideBubble() {
   
-
   document.querySelector(".taleboble").classList.add("hide");
 }
 
@@ -88,7 +89,8 @@ function clickObject() {
 
   console.log("Object found");
   if (this === tv) {
-   tvOutline.classList.remove("hide")
+    tvOutline.classList.remove("hide")
+    document.querySelector(".tv-sound").pause()
   } else if (this === computer) {
     computerOutline.classList.remove("hide");
   } else if (this === NSwitch) {
@@ -97,6 +99,7 @@ function clickObject() {
     playstationOutline.classList.remove("hide");
   } else if (this === lamp) {
     lampOutline.classList.remove("hide");
+    document.querySelector(".lamp-shadow").classList.add("hide")
   }
     
 }
