@@ -20,6 +20,7 @@ function start() {
 function startClick() {
   startScreen.classList.add("hide");
   introScreen.classList.remove("hide");
+  document.querySelector(".klikstartsound").pause();
 
   document.querySelector(".bg-music").play();
   document.querySelector(".bg-music").volume = 0.2;

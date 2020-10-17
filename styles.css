@@ -80,18 +80,25 @@ body {
 }
 
 .icon-show {
-  animation-name: icon-show;
-  animation-iteration-count: 1;
-  animation-timing-function: ease-in;
-  animation-duration: 1s;
+  animation: icon-show 2.5s 1;
+  animation-fill-mode: forwards;
+  transform-box: fill-box;
+  transform-origin: bottom center;
 }
 
 @keyframes icon-show {
   0% {
+    transform: scale(3);
     opacity: 0;
+  }
+
+  20% {
+    transform: scale(3);
+    opacity: 0.7;
   }
 
   100% {
     opacity: 1;
+    transform: scale(1);
   }
 }

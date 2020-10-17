@@ -73,7 +73,7 @@ function randomLightBulbs() {
     randomBulb.querySelector(".bulb-bg").setAttribute("fill", randomcolor);
     randomBulb.querySelector(".bulb-bg").setAttribute("opacity", "1");
     sound.currentTime = 0
-    sound.volume = 0.5;
+    sound.volume = 0.1;
     sound.play();
 
     // check which color so that the right color can be set for highlights
@@ -153,16 +153,20 @@ function whackAMoleEnd() {
   
     document.querySelector(".level-complete").play();
 
+    // You receive the light medal
     document.querySelector(".light-placeholder").classList.add("icon-hide");
     document.querySelector(".light-icon").classList.remove("hide");
     document.querySelector(".light-icon").classList.add("icon-show");
+
     // set localstorage
     localStorage.setItem("lightMedal", "true");
 
-
+    document.querySelector(".level-complete").addEventListener("ended", backToMenu);
   }
 
   clearTimeout(whackTimeout);
+}
 
-  // You receive the light medal
+function backToMenu() {
+  window.location.href = "mainmenu.html";
 }
