@@ -40,7 +40,6 @@ const heatMedal = localStorage.getItem("heatMedal");
 const waterMedal = localStorage.getItem("waterMedal");
 const elMedal = localStorage.getItem("elMedal");
 
-
 if (lightMedal === "true") {
   document.querySelector(".light-placeholder").classList.add("hide");
   document.querySelector(".light-icon").classList.remove("hide");
@@ -62,12 +61,11 @@ window.addEventListener("load", start);
 
 async function start() {
   document.querySelector(".bg-music").play();
+  startSnifIntroduction();
   document.querySelector(".bg-music").volume = 0.1;
 
-
-
   createCards();
-  document.querySelector(".right_or_wrong_introduction").play();
+
   document.querySelectorAll(".card").forEach((item) => {
     item.addEventListener("click", checkRightorWrong);
   });
@@ -78,8 +76,6 @@ function removeBubble() {
 }
 
 function checkRightorWrong(clickedCard) {
-  
-
   document.querySelector(".right_or_wrong_introduction").pause();
   console.log("test");
   counter++;
@@ -88,10 +84,14 @@ function checkRightorWrong(clickedCard) {
     // Sniff tells you you are right
     document.querySelector(".right_or_wrong_right").currentTime = 0;
     document.querySelector(".right_or_wrong_right").play();
+    snifStartTalking();
+    document.querySelector(".right_or_wrong_right").addEventListener("ended", snifStopTalking);
   } else {
     // Sniff tells you you are wrong
     document.querySelector(".right_or_wrong_wrong").currentTime = 0;
     document.querySelector(".right_or_wrong_wrong").play();
+    snifStartTalking();
+    document.querySelector(".right_or_wrong_wrong").addEventListener("ended", snifStopTalking);
   }
 
   //
@@ -154,7 +154,6 @@ function randomizedXPosition() {
 }
 
 function checkPoints() {
-
   console.log(counter);
   if (counter === 5) {
     if (points > 4) {
@@ -166,9 +165,9 @@ function checkPoints() {
         localStorage.setItem("heatMedal", "true");
       }
       console.log("won");
-      start();
       document.querySelector(".right_or_wrong_right").pause();
       document.querySelector(".right_or_wrong_completed").play();
+      document.querySelector(".right_or_wrong_completed").addEventListener("ended", backToMenu);
     } else {
       document.querySelector(".right_or_wrong_wrong").pause();
       document.querySelector(".right_or_wrong_right").pause();
@@ -179,8 +178,42 @@ function checkPoints() {
   }
 }
 
+function startSnifIntroduction() {
+  console.log("startSnifIntroduction");
+  document.querySelector("#snif_container").classList.add("rotate");
+  snifStartTalking();
+  //   document.querySelector(".mouth").classList.add("talk");
+  document.querySelector("#taleboble_container").classList.add("scaleUp");
+  document.querySelector(".taleboble").classList.add("pulse-small");
+  document.querySelector(".right_or_wrong_introduction").play();
+  document.querySelector(".right_or_wrong_introduction").addEventListener("ended", endSnifIntroduction);
+}
+
+function endSnifIntroduction() {
+  console.log("endSnifIntroduction");
+  //   document.querySelector("#snif_container").classList.remove("rotate");
+  //   document.querySelector(".mouth").classList.remove("talk");
+  snifStopTalking();
+  document.querySelector("#taleboble_container").classList.remove("scaleUp");
+  document.querySelector("#taleboble_container").classList.add("scaleDown");
+}
+
+function snifStartTalking() {
+  document.querySelector(".mouth").classList.add("talk");
+  console.log("startTalking");
+}
+function snifStopTalking() {
+  document.querySelector(".mouth").classList.remove("talk");
+  console.log("stopTalking");
+}
+
 function test() {
   location.reload();
+}
+
+function backToMenu() {
+  console.log("backToMenu");
+  window.location.href = "mainmenu.html";
 }
 
 //  Kode jeg måske behøver??

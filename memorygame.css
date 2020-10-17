@@ -53,3 +53,24 @@ span {
 .hide {
   display: none;
 }
+
+.rotate {
+  animation-name: rotate_kf;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes rotate_kf {
+  0% {
+    transform: rotate(0);
+  }
+
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
