@@ -18,8 +18,9 @@
 }
 
 .curtain_roll {
-  animation: curtain_rollkf 2s linear 1 forwards;
+  animation: curtain_rollkf 0.8s linear 1 forwards;
   transform-origin: top;
+  animation-delay: 2s;
 }
 
 @keyframes curtain_rollkf {
@@ -32,7 +33,7 @@
 }
 
 .curtain_roll_up {
-  animation: curtain_roll_upkf 2s linear 1 forwards;
+  animation: curtain_roll_upkf 0.8s linear 1 forwards;
   transform-origin: top;
 }
 
@@ -46,8 +47,9 @@
 }
 
 .curtain_rod_roll {
-  animation: curtain_roll_downkf 2s linear 1 forwards;
+  animation: curtain_roll_downkf 0.8s linear 1 forwards;
   transform-origin: top;
+  animation-delay: 2s;
 }
 
 @keyframes curtain_roll_downkf {
@@ -60,7 +62,7 @@
 }
 
 .curtain_rod_roll_up {
-  animation: curtain_rod_roll_upkf 2s linear 1 forwards;
+  animation: curtain_rod_roll_upkf 0.8s linear 1 forwards;
   transform-origin: top;
 }
 
@@ -74,5 +76,29 @@
 }
 
 .clicked_right {
-  animation: clickedRightkf 1s 1 forwards;
+  animation: clickedRightkf 0.8s 1 forwards;
+}
+
+.check {
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+}
+
+.check_animation {
+  animation: checkAnimationkf 2s ease-in-out;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+
+@keyframes checkAnimationkf {
+  0% {
+    stroke-dashoffset: 500;
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: 500;
+  }
 }
