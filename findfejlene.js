@@ -124,6 +124,11 @@ function levelComplete() {
     // set localstorage
     localStorage.setItem("elMedal", "true");
 
+    lvlComplAudio.addEventListener("ended", backToMenu);
 
   }
+}
+
+function backToMenu() {
+  window.location.href = "mainmenu.html";
 }
