@@ -18,7 +18,7 @@
 }
 
 .curtain_roll {
-  animation: curtain_rollkf 1s linear 1 forwards;
+  animation: curtain_rollkf 2s linear 1 forwards;
   transform-origin: top;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .curtain_roll_up {
-  animation: curtain_roll_upkf 1s linear 1 forwards;
+  animation: curtain_roll_upkf 2s linear 1 forwards;
   transform-origin: top;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .curtain_rod_roll {
-  animation: curtain_roll_downkf 1s linear 1 forwards;
+  animation: curtain_roll_downkf 2s linear 1 forwards;
   transform-origin: top;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .curtain_rod_roll_up {
-  animation: curtain_rod_roll_upkf 1s linear 1 forwards;
+  animation: curtain_rod_roll_upkf 2s linear 1 forwards;
   transform-origin: top;
 }
 
@@ -71,4 +71,8 @@
   100% {
     transform: translateY(0%);
   }
+}
+
+.clicked_right {
+  animation: clickedRightkf 1s 1 forwards;
 }

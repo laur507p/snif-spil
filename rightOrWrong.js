@@ -40,7 +40,6 @@ const heatMedal = localStorage.getItem("heatMedal");
 const waterMedal = localStorage.getItem("waterMedal");
 const elMedal = localStorage.getItem("elMedal");
 
-
 if (lightMedal === "true") {
   document.querySelector(".light-placeholder").classList.add("hide");
   document.querySelector(".light-icon").classList.remove("hide");
@@ -64,8 +63,6 @@ async function start() {
   document.querySelector(".bg-music").play();
   document.querySelector(".bg-music").volume = 0.1;
 
-
-
   createCards();
   document.querySelector(".right_or_wrong_introduction").play();
   document.querySelectorAll(".card").forEach((item) => {
@@ -78,8 +75,6 @@ function removeBubble() {
 }
 
 function checkRightorWrong(clickedCard) {
-  
-
   document.querySelector(".right_or_wrong_introduction").pause();
   console.log("test");
   counter++;
@@ -88,6 +83,7 @@ function checkRightorWrong(clickedCard) {
     // Sniff tells you you are right
     document.querySelector(".right_or_wrong_right").currentTime = 0;
     document.querySelector(".right_or_wrong_right").play();
+    img_good.style.backgroundColor = "green";
   } else {
     // Sniff tells you you are wrong
     document.querySelector(".right_or_wrong_wrong").currentTime = 0;
@@ -154,7 +150,6 @@ function randomizedXPosition() {
 }
 
 function checkPoints() {
-
   console.log(counter);
   if (counter === 5) {
     if (points > 4) {
