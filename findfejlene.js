@@ -108,12 +108,25 @@ function clickObject() {
     if (this === tv) {
       tvOutline.classList.remove("hide");
       document.querySelector(".tv-sound").pause();
+      document.querySelector(".tv-light").setAttribute("fill", "#212121")
+      document.querySelector(".tv-dark").setAttribute("fill", "#161616")
+      document.querySelector(".tv-button").setAttribute("fill", "#FF0000")
     } else if (this === computer) {
       computerOutline.classList.remove("hide");
+      document.querySelector(".computer-button").setAttribute("fill", "#FF0000")
+      document.querySelector(".computer-light").setAttribute("fill", "#212121")
+      document.querySelector(".computer-dark").setAttribute("fill", "#161616")
+
     } else if (this === NSwitch) {
       switchOutline.classList.remove("hide");
+      document.querySelector(".switch-power").classList.add("hide")
+      document.querySelector(".switch-light").setAttribute("fill", "#212121")
+      document.querySelector(".switch-dark").setAttribute("fill", "#161616")
+
     } else if (this === playstation) {
       playstationOutline.classList.remove("hide");
+      document.querySelector(".playstation-button").setAttribute("fill", "#FF0000")
+
     } else if (this === lamp) {
       lampOutline.classList.remove("hide");
       document.querySelector(".lamp-shadow").classList.add("hide");
@@ -137,5 +150,12 @@ function levelComplete() {
     document.querySelector(".el-icon").classList.add("icon-show");
     // set localstorage
     localStorage.setItem("elMedal", "true");
+
+    lvlComplAudio.addEventListener("ended", backToMenu);
+
   }
+}
+
+function backToMenu() {
+  window.location.href = "mainmenu.html";
 }
