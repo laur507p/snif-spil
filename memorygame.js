@@ -156,6 +156,7 @@ function unflipCards() {
 
   firstChosenCard.classList.remove("flip");
   secondChosenCard.classList.remove("flip");
+
   firstChosenCard.addEventListener("click", flipCard);
   secondChosenCard.addEventListener("click", flipCard);
   //Unlocking board
