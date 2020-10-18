@@ -90,7 +90,13 @@
 
       <!-- --------- FOREGROUND ---------- -->
       <use class="foreground" href="foreground.svg#foreground"></use>
-      <use class="taleboble pulse" href="foreground.svg#taleboble"></use>
+      <g id="snif_container">
+        <use class="snif" href="foreground.svg#snif"></use>
+        <use class="mouth" href="foreground.svg#mouth"></use>
+      </g>
+      <g id="taleboble_container">
+        <use class="taleboble" href="foreground.svg#taleboble"></use>
+      </g>
 
       <!---- icon placeholders ----->
       <use class="heat-placeholder" href="foreground.svg#heat-placeholder"></use>
@@ -116,7 +122,6 @@
       <audio class="right_or_wrong_right" src="audio_assets/right_or_wrong_right.mp3"></audio>
       <audio class="right_or_wrong_wrong" src="audio_assets/right_or_wrong_wrong.mp3"></audio>
       <audio class="bg-music" src="background-music.mp3"></audio>
-
     </div>
 
     <div class="level_complete hide"></div>

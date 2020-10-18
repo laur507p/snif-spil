@@ -48,8 +48,9 @@ function start() {
   console.log("start");
   document.querySelector(".bg-music").play();
   document.querySelector(".bg-music").volume = 0.1;
-  document.querySelector(".intro-memorygame").play();
-  document.querySelector(".intro-memorygame").addEventListener("ended", hideBubble);
+  //   document.querySelector(".intro-memorygame").play();
+  //   document.querySelector(".intro-memorygame").addEventListener("ended", hideBubble);
+  startSnifIntroduction();
   document.querySelectorAll(".tile").forEach((tile) => tile.addEventListener("click", flipCard));
 
   if (lightMedal === "true") {
@@ -121,7 +122,9 @@ function checkForMatch() {
   if (firstChosenCard.dataset.id === secondChosenCard.dataset.id) {
     //Play match sound
     document.querySelector(".match-sound").play();
-    console.log("match-sound");
+    snifStartTalking();
+    document.querySelector(".match-sound").addEventListener("ended", snifStopTalking);
+
     //If cards match, push to cards matched cards array, to keep count of how many matches have been made
     cardsMatched.push(cardsChosen);
     console.log("cards matched", cardsMatched);
@@ -185,10 +188,12 @@ function unlockBoard() {
 
 function gameComplete() {
   console.log("gameComplete");
+  snifStartTalking();
+  document.querySelector(".memorygame-complete").play();
+  document.querySelector(".memorygame-complete").addEventListener("ended", snifStopTalking);
+  document.querySelector(".memorygame-complete").addEventListener("ended", backToMenu);
 
   if (waterMedal === "false") {
-    document.querySelector(".memorygame-complete").play();
-
     document.querySelector(".water-placeholder").classList.add("icon-hide");
     document.querySelector(".water-icon").classList.remove("hide");
     document.querySelector(".water-icon").classList.add("icon-show");
@@ -197,7 +202,37 @@ function gameComplete() {
     console.log(waterMedal);
   }
 }
+function startSnifIntroduction() {
+  console.log("startSnifIntroduction");
+  document.querySelector("#snif_container").classList.add("rotate");
+  snifStartTalking();
+  //   document.querySelector(".mouth").classList.add("talk");
+  document.querySelector("#taleboble_container").classList.add("scaleUp");
+  document.querySelector(".taleboble").classList.add("pulse-small");
+  document.querySelector(".intro-memorygame").play();
+  document.querySelector(".intro-memorygame").addEventListener("ended", endSnifIntroduction);
+}
 
-function hideBubble() {
-  document.querySelector(".taleboble").classList.add("hide");
+function endSnifIntroduction() {
+  console.log("endSnifIntroduction");
+  //   document.querySelector("#snif_container").classList.remove("rotate");
+  //   document.querySelector(".mouth").classList.remove("talk");
+  snifStopTalking();
+  document.querySelector("#taleboble_container").classList.remove("scaleUp");
+  document.querySelector("#taleboble_container").classList.add("scaleDown");
+  document.querySelector(".taleboble").classList.remove("pulse-small");
+}
+
+function snifStartTalking() {
+  document.querySelector(".mouth").classList.add("talk");
+  console.log("startTalking");
+}
+function snifStopTalking() {
+  document.querySelector(".mouth").classList.remove("talk");
+  console.log("stopTalking");
+}
+
+function backToMenu() {
+  console.log("backToMenu");
+  window.location.href = "mainmenu.html";
 }
