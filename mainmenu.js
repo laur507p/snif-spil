@@ -50,6 +50,7 @@ function start() {
 
   if (elMedal === "true" || waterMedal === "true" || heatMedal === "true" || lightMedal === "true") {
     document.querySelector(".intro-sound").pause();
+    snifStopTalking();
   }
 }
 

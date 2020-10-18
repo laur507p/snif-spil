@@ -145,7 +145,9 @@ function clickBulb() {
 function whackAMoleEnd() {
   console.log("game over");
   if (lightMedal === "false") {
+    snifStartTalking();
     document.querySelector(".level-complete").play();
+    document.querySelector(".level-complete").addEventListener("ended", snifStopTalking);
 
     // You receive the light medal
     document.querySelector(".light-placeholder").classList.add("icon-hide");

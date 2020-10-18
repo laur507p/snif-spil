@@ -241,3 +241,23 @@ body {
     transform: scaleY(1);
   }
 }
+
+.wiggle {
+  animation: wiggle 2.5s infinite ease;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
+}
