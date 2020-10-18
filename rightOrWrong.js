@@ -86,12 +86,14 @@ function checkRightorWrong(clickedCard) {
     document.querySelector(".right_or_wrong_right").play();
     snifStartTalking();
     document.querySelector(".right_or_wrong_right").addEventListener("ended", snifStopTalking);
+    document.querySelector("#checkmark").classList.add("check_animation");
   } else {
     // Sniff tells you you are wrong
     document.querySelector(".right_or_wrong_wrong").currentTime = 0;
     document.querySelector(".right_or_wrong_wrong").play();
     snifStartTalking();
     document.querySelector(".right_or_wrong_wrong").addEventListener("ended", snifStopTalking);
+    document.querySelector("#xmark").classList.add("check_animation");
   }
 
   //
@@ -135,6 +137,11 @@ function createCards() {
   img_bad.setAttribute("href", rc.bad);
 
   cards.splice(indexRC, 1);
+
+  // Removes check and x animation classlists
+
+  document.querySelector("#checkmark").classList.remove("check_animation");
+  document.querySelector("#xmark").classList.remove("check_animation");
 
   return rc;
 }
